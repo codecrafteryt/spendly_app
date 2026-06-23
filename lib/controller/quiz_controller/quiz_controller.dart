@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spendly_app/core/routes/app_routes.dart';
 import 'package:spendly_app/data/quiz_data.dart';
-import 'package:spendly_app/features/quiz/logic/spender_type_calculator.dart';
 import 'package:spendly_app/data/models/quiz_model/quiz_question.dart';
 import 'package:spendly_app/controller/report_controller/session_controller.dart';
 

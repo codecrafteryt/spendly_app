@@ -4,9 +4,10 @@ import 'dart:typed_data';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:printing/printing.dart';
-import 'package:spendly_app/core/constants/app_strings.dart';
 import 'package:spendly_app/controller/report_controller/session_controller.dart';
 import 'package:spendly_app/data/pdf_generator.dart';
+
+import '../../utils/values/app_strings.dart';
 
 class FullReportController extends GetxController {
   final RxString pdfError = ''.obs;

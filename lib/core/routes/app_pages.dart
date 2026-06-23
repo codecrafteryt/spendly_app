@@ -1,19 +1,13 @@
 import 'package:get/get.dart';
 import 'package:spendly_app/core/routes/app_routes.dart';
 import 'package:spendly_app/view/splash/splash_view.dart';
-import 'package:spendly_app/features/splash/binding/splash_binding.dart';
 import 'package:spendly_app/view/onboarding/onboarding_view.dart';
-import 'package:spendly_app/features/onboarding/binding/onboarding_binding.dart';
 import 'package:spendly_app/view/quizs/quiz_view.dart';
-import 'package:spendly_app/features/quiz/binding/quiz_binding.dart';
 import 'package:spendly_app/view/report/analyzing_view.dart';
-import 'package:spendly_app/features/report/binding/report_binding.dart';
 import 'package:spendly_app/view/report/results_preview_view.dart';
 import 'package:spendly_app/view/report/full_report_view.dart';
-import 'package:spendly_app/features/report/binding/full_report_binding.dart';
 import 'package:spendly_app/view/payment/payment_view.dart';
 import 'package:spendly_app/view/payment/payment_webview.dart';
-import 'package:spendly_app/features/payment/binding/payment_binding.dart';
 
 class AppPages {
   AppPages._();

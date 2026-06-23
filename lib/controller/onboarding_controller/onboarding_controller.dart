@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:spendly_app/core/constants/app_strings.dart';
 import 'package:spendly_app/core/routes/app_routes.dart';
+
+import '../../utils/values/app_strings.dart';
 
 class OnboardingController extends GetxController {
   static const _key = 'onboarding_complete';

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:spendly_app/core/constants/app_strings.dart';
 import 'package:spendly_app/core/theme/app_theme.dart';
+
+import '../utils/values/app_strings.dart';
 
 enum ThemeModeOption { system, light, dark }
 
