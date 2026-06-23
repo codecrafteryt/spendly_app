@@ -12,6 +12,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   get: ^4.7.2
   get_storage: ^2.1.1
+  connectivity_plus: ^7.1.1
   google_fonts: ^6.2.1
   firebase_core: ^3.13.0
   cloud_functions: ^5.3.4
@@ -29,6 +30,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/spendly_icon.jpg"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/spendly_icon.jpg"
 
 flutter:
   uses-material-design: true

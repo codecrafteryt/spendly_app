@@ -2,12 +2,12 @@ import 'dart:io';
 
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:spendly_app/core/utils/firebase_initializer.dart';
 
 class StripeService {
-  StripeService({FirebaseFunctions? functions})
-      : _functions = functions ?? FirebaseFunctions.instance;
+  StripeService({FirebaseFunctions? functions}) : _functions = functions;
 
-  final FirebaseFunctions _functions;
+  final FirebaseFunctions? _functions;
   static const publishableKey = 'pk_test_PLACEHOLDER';
   static const amountCents = 499;
 
@@ -19,7 +19,14 @@ class StripeService {
   }
 
   Future<void> presentPaymentSheet(String sessionId) async {
-    final callable = _functions.httpsCallable('createPaymentIntent');
+    final functions = _functions;
+    if (!isFirebaseReady || functions == null) {
+      throw Exception(
+        'Payments require Firebase. Run flutterfire configure and enable AppConfig.firebaseEnabled.',
+      );
+    }
+
+    final callable = functions.httpsCallable('createPaymentIntent');
     final result = await callable.call<Map<String, dynamic>>({
       'amount': amountCents,
       'currency': 'usd',

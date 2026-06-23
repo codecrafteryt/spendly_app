@@ -7,6 +7,7 @@ import '../../utils/values/app_strings.dart';
 
 class OnboardingController extends GetxController {
   static const _key = 'onboarding_complete';
+  final _storage = GetStorage();
   final pageController = PageController();
   final currentPage = 0.obs;
 
@@ -40,7 +41,7 @@ class OnboardingController extends GetxController {
   void startQuiz() => _complete();
 
   void _complete() {
-    GetStorage().write(_key, true);
+    _storage.write(_key, true);
     Get.offNamed(AppRoutes.quiz);
   }
 }

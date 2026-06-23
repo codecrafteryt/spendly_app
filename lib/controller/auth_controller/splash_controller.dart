@@ -3,6 +3,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:spendly_app/core/routes/app_routes.dart';
 
 class SplashController extends GetxController {
+  final _storage = GetStorage();
   static const _onboardingKey = 'onboarding_complete';
 
   @override
@@ -13,8 +14,7 @@ class SplashController extends GetxController {
 
   Future<void> _navigate() async {
     await Future.delayed(const Duration(seconds: 2));
-    final storage = GetStorage();
-    final done = storage.read<bool>(_onboardingKey) ?? false;
+    final done = _storage.read<bool>(_onboardingKey) ?? false;
     Get.offNamed(done ? AppRoutes.quiz : AppRoutes.onboarding);
   }
 }
